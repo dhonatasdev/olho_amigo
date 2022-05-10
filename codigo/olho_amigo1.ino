@@ -39,7 +39,7 @@ Serial.print("  ");
     digitalWrite(11,HIGH);
     digitalWrite(10,LOW);
     digitalWrite(9, LOW);
-    Serial.println("Safe");
+    Serial.println("Seguro");
   }
   else{
     digitalWrite(11,LOW);}
