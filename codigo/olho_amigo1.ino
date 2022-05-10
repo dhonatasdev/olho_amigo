@@ -1,4 +1,3 @@
-// C++ code
 //
 int duracao;
 int distancia;
