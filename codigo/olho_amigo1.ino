@@ -1,7 +1,7 @@
 // C++ code
 //
-int duration;
-int distance;
+int duracao;
+int distancia;
 
 
 void setup()
@@ -26,16 +26,16 @@ digitalWrite(2,HIGH);
 delayMicroseconds(10);
 digitalWrite(2,LOW);
   
-duration= pulseIn(3,HIGH);
-distance= duration * 0.034/2;
+duracao= pulseIn(3,HIGH);
+distancia= duracao * 0.034/2;
   
-Serial.print("Distance :");
-Serial.print(distance);
+Serial.print("Distancia :");
+Serial.print(distancia);
 Serial.print("cm");
 Serial.print("  ");
 
   
-  if(distance>300){           
+  if(distancia>300){           
     digitalWrite(11,HIGH);
     digitalWrite(10,LOW);
     digitalWrite(9, LOW);
@@ -44,11 +44,11 @@ Serial.print("  ");
   else{
     digitalWrite(11,LOW);}
   
-  if(distance>=150 && distance<300){ 
+  if(distancia>=150 && distancia<300){ 
     digitalWrite(12,HIGH);
     digitalWrite(10,HIGH);
     digitalWrite(9, HIGH);
-    Serial.println("Mid Range");
+    //Serial.println("Intervalo medio");
     delay(2000);
     digitalWrite(10,LOW);
     digitalWrite(9,LOW);
@@ -56,11 +56,11 @@ Serial.print("  ");
   else{
        digitalWrite(12,LOW);}
      
-  if(distance<150){                 
+  if(distancia<150){                 
     digitalWrite(13,HIGH);
     digitalWrite(10,HIGH);
     digitalWrite(9, HIGH);
-    Serial.println("Unsafe");
+    //Serial.println("Nao seguro");
     delay(50);
     digitalWrite(10,LOW);
     digitalWrite(9,LOW);
