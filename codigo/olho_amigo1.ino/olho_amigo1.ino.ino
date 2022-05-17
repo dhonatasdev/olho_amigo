@@ -1,7 +1,6 @@
 #include <Ultrasonic.h>
 
-HC_SR04 sensor1(6,5); // (trigger, echo)
-
+HC_SR04 sensor1(6,5); 
 
 int duracao;
 int distancia;
@@ -44,7 +43,7 @@ Serial.print("  ");
     digitalWrite(10,HIGH);
     digitalWrite(9, HIGH);
     //Serial.println("Intervalo medio");
-    delay(200);
+    delay(1000);
     digitalWrite(10,LOW);
     digitalWrite(9,LOW);
   }
